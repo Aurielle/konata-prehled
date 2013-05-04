@@ -1,0 +1,26 @@
+<table id="prehledy" n:inner-foreach="$anime as $a">
+	<tr>
+		<td rowspan="3" class="pic">
+			<a href="{$imagePrefix}{$a['image']}{$imageExt}">
+				<img class="size-thumbnail" title="{$a['anime']}" src="{$imagePrefix}{$a['image']}-150x150{$imageExt}" alt="{$a['anime']}" width="150" height="150">
+			</a>
+		</td>
+		<td class="item-name">
+			{$a['anime']}
+			<div class="studio">{$a['studio']}</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="desc">
+			{$a['desc']}
+		</td>
+	</tr>
+	<tr>
+		<td class="linkscell">
+			<div class="links">
+				Odkazy: <a href="http://anidb.net/a{$a['anidb']}" target="_blank">AniDB</a>, <a href="{$a['website']}" target="_blank">Oficiální stránky</a>
+				<span style="float: right">Premiéra: {$a['premiere']}</span>
+			</div>
+		</td>
+	</tr>
+</table>
